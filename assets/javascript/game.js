@@ -7,7 +7,7 @@ var compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)]
     document.onkeyup= function(event){
     var playerGuess = event.key;
     console.log('compLetter = %s',compLetter);
-    document.getElementById("guessesdown").innerHTML = "Wins:" + win ;
+    document.getElementById("guessesdown").innerHTML = "Your Guesses so far: " + playerGuess;
     
     if(playerGuess == compLetter){
         console.log("player wins!");
