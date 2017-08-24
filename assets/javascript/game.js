@@ -13,6 +13,7 @@ var compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)]
         console.log("player wins!");
         win++;
         document.getElementById("wincount").innerHTML = "Wins:" + win ;
+        //I still need to have the letters stay on the page after each have been tyoed and another one is typed
         document.getElementById("numofguess").innerHTML = "Guesses Left: 9"
         guessLeft = 9;
         compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
@@ -28,7 +29,7 @@ var compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)]
         document.getElementById("losscount").innerHTML = "Losses: " + loss ;
         document.getElementById("numofguess").innerHTML = "Guesses Left: 9";
         compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
-        guessLeft = 9
+        guessLeft = 9;
     }
 
 }
