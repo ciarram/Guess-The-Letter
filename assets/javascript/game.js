@@ -4,22 +4,29 @@ var loss = 0;
 var guessLeft = 9;
 
 var compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
-document.onkeyup= function(event){
+    document.onkeyup= function(event){
     var playerGuess = event.key;
     console.log('compLetter = %s',compLetter);
-        
+    document.getElementById("guessesdown").innerHTML = "Wins:" + win ;
+    
     if(playerGuess == compLetter){
         console.log("player wins!");
         win++;
+        document.getElementById("wincount").innerHTML = "Wins:" + win ;
+        document.getElementById("numofguess").innerHTML = "Guesses Left: 9"
         guessLeft = 9;
         compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
     }else{
         console.log("you lose a guess");
         guessLeft--;
+        document.getElementById("numofguess").innerHTML = "Guesses Left: " + guessLeft ;
     }
-if(guessLeft == 0 ){
+
+    if(guessLeft == 0 ){
         console.log("start over");
         loss++;
+        document.getElementById("losscount").innerHTML = "Losses: " + loss ;
+        document.getElementById("numofguess").innerHTML = "Guesses Left: 9";
         compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
         guessLeft = 9
     }
