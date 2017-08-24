@@ -4,21 +4,24 @@ var loss = 0;
 var guessLeft = 9;
 
 var compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
-
 document.onkeyup= function(event){
     var playerGuess = event.key;
-
-for(var choice= 0; choice < compLetter.length; choice++){
+    console.log('compLetter = %s',compLetter);
+        
     if(playerGuess == compLetter){
         console.log("player wins!");
         win++;
-    }else if(playerGuess !== compLetter){
+        compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
+    }else{
         console.log("you lose a guess");
         guessLeft--;
         //var oneLessGuess = guessLeft;
     }
-}
 if(guessLeft == 0 ){
-    console.log("start over");
-}
+        console.log("start over");
+        loss++;
+        compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
+        guessLeft = 9
+    }
+
 }
