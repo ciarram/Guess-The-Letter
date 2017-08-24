@@ -11,11 +11,11 @@ document.onkeyup= function(event){
     if(playerGuess == compLetter){
         console.log("player wins!");
         win++;
+        guessLeft = 9;
         compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
     }else{
         console.log("you lose a guess");
         guessLeft--;
-        //var oneLessGuess = guessLeft;
     }
 if(guessLeft == 0 ){
         console.log("start over");
