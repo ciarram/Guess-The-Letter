@@ -2,12 +2,15 @@ var computerGuess = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
 var win = 0;
 var loss = 0;
 var guessLeft = 9;
+var array = [];
 
 var compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
     document.onkeyup= function(event){
     var playerGuess = event.key;
+    array.push(playerGuess);
+    console.log(array);
     console.log('compLetter = %s',compLetter);
-    document.getElementById("guessesdown").innerHTML = "Your Guesses so far: " + playerGuess;
+    document.getElementById("guessesdown").innerHTML = "Your Guesses so far: " + array;
     
     if(playerGuess == compLetter){
         console.log("player wins!");
@@ -17,6 +20,7 @@ var compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)]
         document.getElementById("numofguess").innerHTML = "Guesses Left: 9"
         guessLeft = 9;
         compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
+        array = [];
     }else{
         console.log("you lose a guess");
         guessLeft--;
@@ -30,6 +34,7 @@ var compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)]
         document.getElementById("numofguess").innerHTML = "Guesses Left: 9";
         compLetter = computerGuess[Math.floor(Math.random() * computerGuess.length)];
         guessLeft = 9;
+        array = [];
     }
 
 }
