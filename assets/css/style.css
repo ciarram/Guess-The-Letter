@@ -1,15 +1,26 @@
 body{
-    background-image: url("../images/intersection.png");
+    background-image: url("../images/regal.png");
     margin-left: 20px;
+    color: #ABABFA;
 }
 h1{
     font-size: 36px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 20px;
-    color: #6D6666;
+    text-align: center;
 }
 p{
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #6D6666;
+}
+#computerinput{
+    text-align: center;
+}
+section{
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+    border-width: 1px;
+    border-style: groove;
+    border-color: #ECA5BE;
 }
