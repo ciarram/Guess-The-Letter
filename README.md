@@ -1,4 +1,4 @@
-# Psychic-Game
+# Guess The Letter
 
 Come one come all! 
 
